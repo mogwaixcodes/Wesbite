@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Security Log Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Security Log Analyzer</h1>
+        <p>Analyze HTTP logs and identify potentially suspicious activity.</p>
+    </header>
+
+
+    <main class="dashboard">
+
+        <!-- Summary Cards -->
+        <section class="summary-grid">
+
+            <div class="card">
+                <h2>Total Requests</h2>
+                <p id="totalRequests">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Failed Requests</h2>
+                <p id="failedRequests">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Suspicious IPs</h2>
+                <p id="suspiciousIPs">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Server Errors</h2>
+                <p id="serverErrors">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Log Input -->
+        <section class="panel">
+
+            <h2>Log Input</h2>
+
+            <textarea
+                id="logInput"
+                placeholder="Paste HTTP log data here..."
+            ></textarea>
+
+            <div class="button-container">
+                <button id="analyzeButton">Analyze Logs</button>
+                <button id="clearButton">Clear</button>
+            </div>
+
+        </section>
+
+
+        <!-- Traffic Section -->
+        <section class="panel">
+
+            <h2>Traffic Overview</h2>
+
+            <div id="trafficDisplay">
+                <p>No log data analyzed yet.</p>
+            </div>
+
+        </section>
+
+
+        <!-- Suspicious Activity -->
+        <section class="panel">
+
+            <h2>Suspicious Activity</h2>
+
+            <div id="suspiciousActivity">
+                <p>No suspicious activity detected.</p>
+            </div>
+
+        </section>
+
+
+        <!-- Log Entries -->
+        <section class="panel">
+
+            <h2>Log Entries</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>IP Address</th>
+                            <th>Method</th>
+                            <th>Path</th>
+                            <th>Status</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="logTableBody">
+                        <!-- JavaScript will add logs here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

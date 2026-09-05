@@ -1,0 +1,187 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Dashboard</title> 
+        <link rel="stylesheet" href="style.css"> </head> 
+        <body> 
+            <main class="dashboard"> <!-- Date --> <section class="card date-card"> <h2><u>Date</u></h2> 
+                <div id="currentDate"></div>
+             </section> <!-- Clock --> 
+             <section class="card clock-card"> <h2><u>Time</u></h2> <div id="clock"></div> 
+            </section>
+            <section class="card image-card">
+                <img src="/Users/owner/Documents/2026 Portfolio/Dashboard/image2.jpg" alt="Dashboard Image">
+
+            </section>
+            <!--Inspiration-->
+            <section class="card quote-card">
+                <h2>Daily Inspiration</h2>
+                <p id="quote">Test Quote</p>
+                </section> 
+            <!-- Calendar -->
+             <section class="card calendar-card"> 
+                <div class="calendar-header"> <button id="prevMonth">◀</button> <u><h2 id="calendarTitle"></h2></u> <button id="nextMonth">▶</button> </div> 
+                <div class="calendar-weekdays"> 
+                    <div><u>Sun</u></div> 
+                    <div><u>Mon</u></div> 
+                    <div><u>Tue</u></div> 
+                    <div><u>Wed</u></div> 
+                    <div><u>Thu</u></div> 
+                    <div><u>Fri</u></div> 
+                    <div><u>Sat</u></div> 
+                </div> <div id="calendarGrid" class="calendar-grid"></div> </section> 
+                <!-- Weather --> 
+                 <section class="card weather-card">
+
+    <h2>Weather</h2>
+
+    <div class="weather-location">
+        Portland, OR
+    </div>
+
+    <div class="weather-main">
+
+        <div class="weather-icon">
+            ☀️
+        </div>
+
+        <div class="weather-temperature" id="weatherTemperature">
+            72°F
+        </div>
+
+        <div class="weather-condition" id="weatherCondition">
+            Clear Sky
+        </div>
+
+    </div>
+
+    <div class="weather-details">
+
+        <div>
+            <span>Feels Like</span>
+            <strong>70°F</strong>
+        </div>
+
+        <div>
+            <span>Humidity</span>
+            <strong>48%</strong>
+        </div>
+
+        <div>
+            <span>Wind</span>
+            <strong>6 mph</strong>
+        </div>
+
+        <div>
+            <span>Visibility</span>
+            <strong>10 mi</strong>
+        </div>
+
+        <div>
+            <span>Pressure</span>
+            <strong>1015 hPa</strong>
+        </div>
+
+    </div>
+
+    <div class="sun-times">
+
+        <div>
+            <span>Sunrise</span>
+            <strong>6:12 AM</strong>
+        </div>
+
+        <div>
+            <span>Sunset</span>
+            <strong>8:05 PM</strong>
+        </div>
+
+    </div>
+
+</section>
+ <!-------------- News ------------------------> 
+    <section class="card news-card"> 
+
+    <h2>Latest News</h2>
+
+    <div id="newsList">
+
+        <article class="news-item">
+            <h3>Technology and Innovation</h3>
+            <p>Explore the latest developments in technology and innovation.</p>
+            <span>Today</span>
+        </article>
+
+        <article class="news-item">
+            <h3>Science and Discovery</h3>
+            <p>New discoveries and ideas shaping our understanding of the world.</p>
+            <span>Today</span>
+        </article>
+
+        <article class="news-item">
+            <h3>World and Current Events</h3>
+            <p>A look at important events and stories from around the world.</p>
+            <span>Today</span>
+        </article>
+
+    </div>
+
+</section>
+                    <!-- Keep your existing news HTML/API content here --> </section> 
+            
+  
+  <!---------------TO DO LIST------------------>                  
+            
+                    <section class="card todo-card">
+
+            <h2><u>To-Do List</u></h2>
+
+                <div class="todo-input">
+                  <input
+                     type="text"
+                     id="todoInput"
+                     placeholder="Add a task..."
+        >
+
+        <button id="addTodo">
+            +
+        </button>
+    </div>
+
+    <ul id="todoList"></ul>
+
+</section>
+
+<section class="card notes-card">
+
+    <h2>Quick Notes</h2>
+
+    <div class="note-box">
+
+        <div class="note-box">
+
+
+        <h3>Current Notes</h3>
+
+        <textarea
+            id="notes"
+            placeholder="Write your notes here..."
+        ></textarea>
+
+    </div>
+
+    <div class="note-box">
+
+        <h3>Friendly Reminder</h3>
+
+        <p>Hang in there times are tough.</p>
+
+    </div>
+
+</section>
+                    </main> 
+                   <script src="script.js"></script>
+                 </body> 
+                 </html>

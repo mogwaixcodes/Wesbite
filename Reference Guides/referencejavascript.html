@@ -1,0 +1,172 @@
+<!-- 1. Variables
+
+Used to store data.
+
+let name = "Alex";      // can change
+const age = 25;        // cannot change
+var oldWay = true;     // avoid using var
+
+
+Rule of thumb
+
+Use const by default
+
+Use let only if you plan to reassign
+
+2. Data Types
+
+JavaScript is dynamically typed.
+
+const text = "Hello";        // string
+const number = 42;          // number
+const isActive = true;      // boolean
+const nothing = null;       // null
+let notDefined;             // undefined
+const user = { name: "Sam" }; // object
+const list = [1, 2, 3];     // array
+
+3. Operators
+Arithmetic
+let total = 10 + 5;
+total += 2;
+
+Comparison
+5 === "5"; // false (strict)
+5 == "5";  // true (loose — avoid)
+
+Logical
+true && false; // false
+true || false; // true
+!true;         // false
+
+4. Functions
+
+Reusable blocks of code.
+
+Regular function
+function greet(name) {
+  return `Hello, ${name}`;
+}
+
+greet("Alex");
+
+Arrow function (modern & preferred)
+const greet = (name) => {
+  return `Hello, ${name}`;
+};
+
+// short version
+const greet = name => `Hello, ${name}`;
+
+5. Conditionals
+
+Control flow.
+
+const age = 18;
+
+if (age >= 18) {
+  console.log("Adult");
+} else {
+  console.log("Nah");
+}
+
+Ternary (compact)
+const message = age >= 18 ? "Adult" : "Nah";
+
+6. Arrays
+
+Lists of values.
+
+const fruits = ["apple", "banana", "orange"];
+
+fruits.push("mango");      // add
+fruits.pop();              // remove last
+
+Common array methods
+fruits.forEach(fruit => {
+  console.log(fruit);
+});
+
+const upperFruits = fruits.map(fruit => fruit.toUpperCase());
+
+const longNames = fruits.filter(fruit => fruit.length > 5);
+
+7. Objects
+
+Key–value pairs.
+
+const user = {
+  name: "Alex",
+  age: 30,
+  isAdmin: false
+};
+
+console.log(user.name);
+user.age = 31;
+
+Destructuring (very common)
+const { name, age } = user;
+
+8. Loops
+for loop
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+for...of (arrays)
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+
+9. DOM Basics (Super Important for Web Pages)
+
+This is where JS talks to HTML.
+
+Select elements
+const button = document.querySelector("button");
+const menu = document.querySelector(".menu");
+
+Change content / styles
+button.textContent = "Clicked!";
+menu.style.display = "none";
+
+10. Events
+
+Make pages interactive.
+
+button.addEventListener("click", () => {
+  menu.classList.toggle("open");
+});
+
+
+This is exactly what you’ll use for:
+
+Mobile nav toggles
+
+Buttons
+
+Forms
+
+11. Classes & classList
+
+Very common in UI work.
+
+menu.classList.add("active");
+menu.classList.remove("active");
+menu.classList.toggle("active");
+
+12. Basic Debugging
+
+Your best friend.
+
+console.log("Hello");
+console.error("Something broke");
+
+13. File Structure Example (Landing Page)
+<script src="script.js"></script>
+
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("JS loaded");
+});
+-->
